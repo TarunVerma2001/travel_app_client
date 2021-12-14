@@ -1,0 +1,82 @@
+.infoSection {
+  padding: 70px 100px 150px 100px;
+  background-color: #e9dcdc;
+  display: flex;
+}
+.images {
+  padding-left: 100px;
+  width: 50%;
+}
+.image1 {
+  height: 450px;
+  width: 300px;
+  border-radius: 150px;
+  background-repeat: no-repeat;
+  object-fit: cover;
+  border: 5px solid white;
+}
+.image2 {
+  position: relative;
+  right: 100px;
+  top: 50px;
+  border: 5px solid white;
+  object-fit: cover;
+  height: 400px;
+  width: 266px;
+  border-radius: 133px;
+  background-repeat: no-repeat;
+}
+.introText {
+  width: 60%;
+  padding-top: 70px;
+  display: flex;
+  flex-direction: column;
+}
+.subtitle {
+  color: #2d5c56;
+  font-weight: bold;
+  font-size: 18px;
+}
+.title {
+  padding-top: 10px;
+  color: #002248;
+  font-weight: bold;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 70px;
+}
+.description {
+  line-height: 1.6;
+  padding-top: 10px;
+  color: #6c7581;
+  font-size: 18px;
+}
+.aboutUsCards {
+  padding: 50px;
+  width: 50%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-row-gap: 100px;
+  grid-column-gap: 200px;
+}
+
+.cards {
+  height: 120px;
+  width: 120px;
+  border: 1px solid #fec4b6;
+  border-radius: 10px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.cardTitle {
+  color: #3685fb;
+  font-weight: bold;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 25px;
+}
+.cardSubTitle {
+  color: #002248;
+  font-size: 14px;
+}

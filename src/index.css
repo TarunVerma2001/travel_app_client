@@ -1,104 +1,15 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;1,100;1,300&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles:wght@700&family=Roboto:ital,wght@0,100;0,300;0,400;1,100;1,300&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;1,100;1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles:wght@700&family=Roboto:ital,wght@0,100;0,300;0,400;1,100;1,300&display=swap');
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Roboto';
 }
-
-.navbar {
-  height: 500px;
-  background-image: url("./assets/bg2.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  object-fit: cover;
-}
-
 ::-webkit-scrollbar {
   display: none;
 }
 
-.header {
-  backdrop-filter: blur(5px);
-  padding: 20px 40px;
-  font-size: 20px;
-  font-family: "Roboto";
-  display: flex;
-  justify-content: center;
+a {
+  text-decoration: none;
 }
-
-.title {
-  flex: 1;
-  font-family: "Fuzzy Bubbles";
-  font-size: 30px;
-  color: #181d31;
-  font-weight: bold;
-  padding-top: 5px;
-}
-
-.auth {
-  color: #181d31;
-  flex: 2;
-  justify-content: end;
-  display: flex;
-  text-align: center;
-}
-
-.login p {
-  transition: 0.5s background-color;
-  margin-right: 10px;
-  padding: 5px;
-  border-radius: 5px;
-  text-align: center;
-}
-
-.signup p {
-  transition: 0.5s background-color;
-  margin-right: 10px;
-  border-radius: 5px;
-  padding: 5px;
-  text-align: center;
-}
-
-.login p:hover {
-  margin-right: 10px;
-  padding: 5px;
-  border-radius: 5px;
-  background-color: #181d31;
-  color: #f0e9d2;
-  text-align: center;
-}
-
-.signup p:hover {
-  margin-right: 10px;
-  padding: 5px;
-  border-radius: 5px;
-  background-color: #181d31;
-  color: #f0e9d2;
-  text-align: center;
-}
-
-.homePage {
-  padding: 20px 50px;
-  background-color: #e6ddc4;
-  height: 100%;
-}
-.cards div {
-  height: 100%;
-  width: 100%;
-  border-radius: 5px;
-  background-color: #F0E9D2;
-  /* box-shadow: 5px 2px; */
-  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-  /* box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px; */
-  /* box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset; */
-}
-.cards {
-  height: 100%;
-  width: 100%;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-gap: 20px;
-}
-

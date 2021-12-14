@@ -1,0 +1,50 @@
+.trip {
+  padding: 70px 100px 50px 100px;
+}
+.intro {
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+.subtitle {
+  color: #2d5c56;
+  font-size: 18px;
+}
+.title {
+  padding-top: 10px;
+  color: #002248;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: bold;
+  font-size: 50px;
+}
+.description {
+  padding-top: 10px;
+  padding-bottom: 30px;
+  color: #6c7581;
+  font-size: 18px;
+}
+.cards {
+  width: 300px;
+  text-align: center;
+  padding: 60px;
+  border-radius: 20px;
+  border: 1px solid #fec4b6;
+}
+.introCards {
+  width: 70%;
+  margin: 20px auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.cardsSubTitle {
+  color: #287269;
+  font-size: 15px;
+}
+.cardsTitle {
+  padding-top: 10px;
+  color: #002248;
+  font-weight: bold;
+  font-size: 20px;
+}
