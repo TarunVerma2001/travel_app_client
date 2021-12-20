@@ -9,12 +9,12 @@ const PackagesInfo = () => {
       <div className={styles.infoSection}>
         <div className={styles.images}>
           <img
-            src="/static/img/tour-4-1.jpg"
+            src="/static/img/tour-4-3.jpg"
             alt="image1"
             className={styles.image1}
           />
           <img
-            src="/static/img/tour-4-2.jpg"
+            src="/static/img/tour-7-2.jpg"
             alt="image2"
             className={styles.image2}
           />

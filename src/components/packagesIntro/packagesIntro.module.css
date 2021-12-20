@@ -6,9 +6,11 @@
 .images {
   width: 50%;
 }
+.images {
+  width: 600px;
+}
 .image1 {
-  position: relative;
-
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   height: 450px;
   width: 300px;
   border-radius: 150px;
@@ -17,13 +19,14 @@
   border: 5px solid white;
 }
 .image2 {
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   position: relative;
-  right: 100px;
   top: 50px;
+  left: -130px;
   border: 5px solid white;
   object-fit: cover;
-  height: 400px;
-  width: 266px;
+  height: 380px;
+  width: 250px;
   border-radius: 133px;
   background-repeat: no-repeat;
 }

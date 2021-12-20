@@ -33,7 +33,7 @@ const TravelInfo = () => {
             className={styles.image1}
           />
           <img
-            src="/static/img/tour-5-2.jpg"
+            src="/static/img/tour-5-3.jpg"
             alt="image2"
             className={styles.image2}
           />
