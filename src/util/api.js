@@ -2,7 +2,7 @@ import axios from 'axios';
 import Cookies from 'js-cookie';
 import toast from 'react-hot-toast';
 
-const api = axios.create({ baseURL: 'http://localhost:8000/api/v1' });
+const api = axios.create({ baseURL: 'https://travel-app-serverzzz.herokuapp.com/api/v1/' });
 
 export const getConfig = () => {
   console.log(Cookies.get('token'));
