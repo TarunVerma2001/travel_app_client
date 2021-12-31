@@ -7,6 +7,8 @@ import AboutUs from './pages/aboutUs/aboutUs';
 import SignUp from './components/signup/signup';
 import Login from './components/login/login';
 import TourView from './components/tourView/tourView';
+import Payment from './components/payment/payment';
+// import Index from './components/googleMap/googleMap';
 function App() {
   return (
     <Router>
@@ -33,6 +35,12 @@ function App() {
             <Route path="/tour/:touId">
               <TourView />
             </Route>
+            <Route path="/payment">
+              <Payment />
+            </Route>
+            {/* <Route path='/map'>
+              <Index />
+            </Route> */}
           </Switch>
         </div>
       </div>

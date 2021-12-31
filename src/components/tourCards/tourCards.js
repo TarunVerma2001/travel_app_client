@@ -1,32 +1,60 @@
 import styles from './tourCards.module.css';
-import { Select } from '@chakra-ui/react';
 import { Link } from 'react-router-dom';
-import { getAllTours } from './../../util/api';
+import { getAllTours, sortAllTours } from './../../util/api';
 import { useState, useEffect } from 'react';
+import { HiArrowDown } from 'react-icons/hi';
 
 const TourCards = () => {
   const [tours, setTours] = useState(null);
+  const [dropVis, setDropVis] = useState(false);
+  const [sortType, setSortType] = useState();
+
+  const getData = async () => {
+    const res = await getAllTours();
+    console.log(res);
+    if (res.status === 'success') {
+      setTours(res.data.tours);
+    }
+  };
+  const sortAllData = async () => {
+    const res = await sortAllTours(sortType);
+    console.log(res);
+    if (res.status === 'success') {
+      setTours(res.data.tours);
+    }
+  };
 
   useEffect(() => {
-    const getData = async () => {
-      const res = await getAllTours();
-      console.log(res);
-      if (res.status === 'success') {
-        setTours(res.data.tours);
-      }
-    };
     getData();
   }, []);
+  useEffect(() => {
+    sortAllData();
+  }, [sortType]);
 
   return (
     <div className={styles.tours}>
       <div className={styles.sorting}>
-        {tours && (
+        <div className={styles.sortDropdown}>
+          <button
+            className={styles.dropButton}
+            onClick={() => setDropVis(!dropVis)}
+          >
+            <p>Sort</p>
+            <HiArrowDown />
+          </button>
+          {dropVis && (
+            <div className={styles.sort}>
+              <button onClick={() => setSortType('+')}>Low to High</button>
+              <button onClick={() => setSortType('-')}>High to Low</button>
+            </div>
+          )}
+        </div>
+        {/* {tours && (
           <Select icon="none" placeholder="Sort" className={styles.sort}>
             <option value="option1">Ascending</option>
             <option value="option2">Descending</option>
           </Select>
-        )}
+        )} */}
       </div>
       <div className={styles.tourCards}>
         {tours &&

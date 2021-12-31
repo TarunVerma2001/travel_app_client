@@ -2,9 +2,13 @@ import axios from 'axios';
 import Cookies from 'js-cookie';
 import toast from 'react-hot-toast';
 
-const api = axios.create({ baseURL: 'https://travel-app-serverzzz.herokuapp.com/api/v1/' });
+const api = axios.create({
+  baseURL: 'https://travel-app-serverzzz.herokuapp.com/api/v1/',
+});
+// const api = axios.create({ baseURL: 'http://127.0.0.1:8000/api/v1/' });
 
 export const getConfig = () => {
+  console.log('web verification');
   console.log(Cookies.get('token'));
   return {
     headers: {
@@ -16,6 +20,20 @@ export const getConfig = () => {
 export const getAllTours = async () => {
   try {
     const res = await api.get('/tours');
+    console.log(res);
+    return {
+      status: 'success',
+      ...res.data,
+    };
+  } catch (err) {
+    toast.error('Server is Busy, Please try again later!');
+    // console.log(err.message);
+    return { status: 'fail' };
+  }
+};
+export const sortAllTours = async (sortType) => {
+  try {
+    const res = await api.get(`/tours?sort=${sortType}price`);
     return {
       status: 'success',
       ...res.data,
@@ -65,9 +83,9 @@ export const getme = async (onLoad) => {
     const res = await api.get('/users/getMe', getConfig());
     onLoad(res.data);
   } catch (err) {
-    // toast.error(err.response.data.message); 
+    // toast.error(err.response.data.message);
   }
-}
+};
 
 export const postReview = async (tourId, data, onPost) => {
   try {
@@ -76,5 +94,16 @@ export const postReview = async (tourId, data, onPost) => {
     onPost();
   } catch (err) {
     toast.error(err.response.data.message);
+  }
+};
+
+export const getPaymentInfo = async () => {
+  console.log('inside');
+  try {
+    const res = await api.post('/razorpay');
+    return res.data;
+  } catch (err) {
+    console.log(err);
+    // toast.err(err.reaponse.data.message);
   }
 };
